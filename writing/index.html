@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing | Siddhartha Parmar on Zambia, Energy, Space and AI</title>
+<meta name="description" content="Essays by Siddhartha Parmar on African infrastructure, data centres beside hydropower, satellites, conservation, product design for load shedding, and AI agents in production.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Siddhartha Parmar">
+<link rel="canonical" href="https://siddharthaparmar.com/writing/">
+<meta name="theme-color" content="#07090E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_ZM">
+<meta property="og:url" content="https://siddharthaparmar.com/writing/">
+<meta property="og:site_name" content="Siddhartha Parmar">
+<meta property="og:title" content="Writing | Siddhartha Parmar on Zambia, Energy, Space and AI">
+<meta property="og:description" content="Essays by Siddhartha Parmar on African infrastructure, data centres beside hydropower, satellites, conservation, product design for load shedding, and AI agents in production.">
+<meta property="og:image" content="https://siddharthaparmar.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Writing | Siddhartha Parmar on Zambia, Energy, Space and AI">
+<meta name="twitter:description" content="Essays by Siddhartha Parmar on African infrastructure, data centres beside hydropower, satellites, conservation, product design for load shedding, and AI agents in production.">
+<meta name="twitter:image" content="https://siddharthaparmar.com/og.png">
+<link rel="icon" href="/assets/crest.png" type="image/png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://siddharthaparmar.com/writing/#page","url":"https://siddharthaparmar.com/writing/","name":"Writing by Siddhartha Parmar","about":{"@id":"https://siddharthaparmar.com/#sid"},"dateModified":"2026-10-06","hasPart":[{"@type":"Article","headline":"Africa's Next Infrastructure Won't Look Like Roads","url":"https://siddharthaparmar.com/writing/africas-next-infrastructure-wont-look-like-roads.html","author":{"@id":"https://siddharthaparmar.com/#sid"}},{"@type":"Article","headline":"Building Data Centres Beside Hydropower","url":"https://siddharthaparmar.com/writing/building-data-centres-beside-hydropower.html","author":{"@id":"https://siddharthaparmar.com/#sid"}},{"@type":"Article","headline":"Why Satellites Matter More Than Fibre","url":"https://siddharthaparmar.com/writing/why-satellites-matter-more-than-fibre.html","author":{"@id":"https://siddharthaparmar.com/#sid"}},{"@type":"Article","headline":"Adventure Businesses Are Conservation Businesses","url":"https://siddharthaparmar.com/writing/adventure-businesses-are-conservation-businesses.html","author":{"@id":"https://siddharthaparmar.com/#sid"}},{"@type":"Article","headline":"Design for Load Shedding","url":"https://siddharthaparmar.com/writing/design-for-load-shedding.html","author":{"@id":"https://siddharthaparmar.com/#sid"}},{"@type":"Article","headline":"What Actually Breaks When You Deploy Agents","url":"https://siddharthaparmar.com/writing/what-actually-breaks-when-you-deploy-agents.html","author":{"@id":"https://siddharthaparmar.com/#sid"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Siddhartha Parmar","item":"https://siddharthaparmar.com/"},{"@type":"ListItem","position":2,"name":"Writing","item":"https://siddharthaparmar.com/writing/"}]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>
+/* Random theme per visit (A Orbital / B Cosmos / C Ground Control). ?theme=a|b|c pins one. */
+(function(){
+  var T={
+    a:{n:"Orbital",f:"Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500",c:"#030712"},
+    b:{n:"Cosmos",f:"Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700",c:"#06000F"},
+    c:{n:"Ground Control",f:"Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700",c:"#05080A"}
+  },keys=["a","b","c"],root=document.documentElement,pick=null;
+  try{var q=new URLSearchParams(location.search).get("theme");if(q&&T[q.toLowerCase()])pick=q.toLowerCase()}catch(e){}
+  if(!pick){
+    var last=null;try{last=localStorage.getItem("sp-theme")}catch(e){}
+    var pool=keys.filter(function(k){return k!==last});
+    pick=pool[Math.floor(Math.random()*pool.length)];
+  }
+  try{localStorage.setItem("sp-theme",pick)}catch(e){}
+  root.setAttribute("data-theme",pick);
+  var l=document.createElement("link");l.rel="stylesheet";
+  l.href="https://fonts.googleapis.com/css2?family="+T[pick].f+"&display=swap";
+  document.head.appendChild(l);
+  window.__THEMES=T;
+  var seen=false;try{seen=!!sessionStorage.getItem("sp-splash")}catch(e){}
+  if(!seen&&!matchMedia("(prefers-reduced-motion: reduce)").matches)root.classList.add("splash-active");
+})();
+</script>
+
+<style>
+:root{
+  --void:#07090E;
+  --strata:#0E1420;
+  --strata-2:#131B2B;
+  --line:rgba(var(--haze-rgb),.18);
+  --line-hot:rgba(var(--copper-rgb),.45);
+  --copper:#B87333;
+  --copper-lift:#E09A55;
+  --signal:#3FE0C8;
+  --haze:#98A3BE;
+  --haze-dim:#7C88A8;
+  --paper:#EDEFF5;
+  --violet:#5B4BD6;
+  --void-rgb:7,9,14;--strata-rgb:14,20,32;--strata2-rgb:19,27,43;
+  --copper-rgb:184,115,51;--signal-rgb:63,224,200;--haze-rgb:124,136,168;--violet-rgb:91,75,214;
+  --on-accent:#0A0C12;
+  --shell:min(1180px,92vw);
+  --display:"Syne",Georgia,serif;
+  --body:"Inter",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+/* ---------- themes (set on <html data-theme> by the head script) ---------- */
+:root[data-theme="a"]{ /* Orbital */
+  --void:#030712;--strata:#0A1224;--strata-2:#0F1A33;
+  --void-rgb:3,7,18;--strata-rgb:10,18,36;--strata2-rgb:15,26,51;
+  --copper:#3B82F6;--copper-lift:#60A5FA;--copper-rgb:59,130,246;
+  --signal:#E09A55;--signal-rgb:224,154,85;--violet:#1D4ED8;--violet-rgb:29,78,216;
+  --haze-rgb:120,150,200;--line-hot:rgba(59,130,246,.45);--on-accent:#030712;
+  --display:"Syne",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+:root[data-theme="b"]{ /* Cosmos */
+  --void:#06000F;--strata:#120824;--strata-2:#1A0F33;
+  --void-rgb:6,0,15;--strata-rgb:18,8,36;--strata2-rgb:26,15,51;
+  --copper:#8B5CF6;--copper-lift:#A78BFA;--copper-rgb:139,92,246;
+  --signal:#F59E0B;--signal-rgb:245,158,11;--violet:#6D28D9;--violet-rgb:109,40,217;
+  --haze-rgb:150,130,200;--line-hot:rgba(139,92,246,.5);--on-accent:#06000F;
+  --display:"Syne",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;
+}
+:root[data-theme="c"]{ /* Ground Control */
+  --void:#05080A;--strata:#0B1316;--strata-2:#101C20;
+  --void-rgb:5,8,10;--strata-rgb:11,19,22;--strata2-rgb:16,28,32;
+  --copper:#00FFD1;--copper-lift:#6BFFE6;--copper-rgb:0,255,209;
+  --signal:#00FFD1;--signal-rgb:0,255,209;--violet:#0E7490;--violet-rgb:14,116,144;
+  --haze-rgb:110,160,160;--line-hot:rgba(0,255,209,.4);--on-accent:#05080A;
+  --display:"Syne",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(1000px 600px at 78% -8%,rgba(var(--violet-rgb),.38),transparent 64%),radial-gradient(800px 520px at 6% 12%,rgba(var(--copper-rgb),.16),transparent 62%),var(--void)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 18%,transparent 74%)}
+::selection{background:var(--copper);color:var(--on-accent)}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.shell{width:var(--shell);margin:0 auto;position:relative;z-index:2}
+nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(var(--void-rgb),.72);border-bottom:1px solid var(--line)}
+.navin{width:var(--shell);margin:0 auto;display:flex;align-items:center;gap:26px;height:60px}
+.brand{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-decoration:none;white-space:nowrap}
+.brand b{color:var(--copper-lift);font-weight:500}
+.navlinks{margin-left:auto;display:flex;gap:20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--haze);text-decoration:none;transition:color .18s}
+.navlinks a:hover,.navlinks a[aria-current]{color:var(--signal)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--copper-lift);margin-bottom:16px}
+h1{font-family:var(--display);font-weight:800;letter-spacing:-.04em;line-height:.95;font-size:clamp(2.5rem,8vw,5.6rem)}
+h1 em{font-style:normal;color:var(--copper-lift)}
+h2{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.02;font-size:clamp(1.9rem,4.6vw,3.1rem);margin-bottom:14px}
+h3{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:10px}
+.lede{color:var(--haze);max-width:62ch;font-size:1.08rem}
+.sub{margin-top:24px;max-width:58ch;color:#C2CADB;font-size:1.12rem}
+header{min-height:88svh;display:flex;align-items:center;padding:110px 0 56px;position:relative}
+section{padding:clamp(64px,10vw,110px) 0}
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:15px 24px;border:1px solid var(--line);border-radius:2px;color:var(--paper);transition:all .2s;background:transparent;cursor:pointer}
+.btn:hover{border-color:var(--copper);color:var(--copper-lift)}
+.btn.solid{background:var(--copper);border-color:var(--copper);color:var(--on-accent);font-weight:500}
+.btn.solid:hover{background:var(--copper-lift);border-color:var(--copper-lift);color:var(--on-accent)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:3px;padding:28px 26px;background:linear-gradient(165deg,rgba(var(--strata2-rgb),.66),rgba(var(--strata-rgb),.44));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--line-hot)}
+.card .band{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--copper-lift);margin-bottom:16px}
+.card p{color:var(--haze);font-size:.98rem}
+.card ul{margin:14px 0 0 18px;color:var(--haze);font-size:.95rem}
+.card li{margin-bottom:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;margin-top:40px;border:1px solid var(--line);counter-reset:s}
+.step{padding:24px 22px;background:rgba(var(--strata-rgb),.5);outline:1px solid var(--line);counter-increment:s}
+.step::before{content:"0" counter(s);display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--copper-lift);margin-bottom:12px}
+.step p{color:var(--haze);font-size:.95rem}
+.spec{width:100%;border-collapse:collapse;margin-top:34px;font-size:.95rem}
+.spec th,.spec td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.spec th{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-lift);font-weight:500}
+.spec td{color:var(--haze)}
+.spec td:first-child{color:var(--paper)}
+.scroll{overflow-x:auto}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--copper-lift)}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--haze);margin-top:12px;max-width:66ch}
+.contact{border:1px solid var(--line);border-radius:3px;padding:clamp(28px,5vw,52px);background:linear-gradient(150deg,rgba(var(--violet-rgb),.14),rgba(var(--strata-rgb),.6))}
+.doors{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.door{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--haze);cursor:pointer;transition:all .2s}
+.door:hover{border-color:var(--copper);color:var(--copper-lift)}
+.door.on{background:var(--copper);border-color:var(--copper);color:var(--on-accent);font-weight:500}
+.doorhint{margin-top:18px;color:var(--haze);max-width:64ch;min-height:3.4em}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.field{display:block}.field.wide{margin-top:16px}
+.field span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--haze);margin-bottom:8px}
+.field input,.field textarea{width:100%;padding:13px 14px;font:inherit;font-size:.98rem;color:var(--paper);background:rgba(var(--void-rgb),.6);border:1px solid var(--line);border-radius:2px}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--copper)}
+.field input.bad,.field textarea.bad{border-color:#E0554F}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+.fbar{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:22px}
+.fnote{font-size:.9rem;color:var(--haze)}.fnote.err{color:#F08A85}.fnote.ok{color:var(--signal)}
+.note{margin-top:28px;font-size:.85rem;color:var(--haze-dim);max-width:70ch}
+footer{border-top:1px solid var(--line);padding:30px 0;position:relative;z-index:2;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--haze)}
+footer .fin{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer a{text-decoration:none;margin-left:18px}footer a:hover{color:var(--signal)}
+.crumbs{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--haze-dim);margin-bottom:22px}
+.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--signal)}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:80;background:linear-gradient(90deg,var(--copper),var(--signal));transform:scaleX(0);transform-origin:left;pointer-events:none}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.grid3>.card,.steps>.step{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1),border-color .25s;transition-delay:calc(var(--i,0)*.09s)}
+.in .grid3>.card,.in .steps>.step{opacity:1;transform:none}
+.in .grid3>.card:hover{transform:translateY(-3px);transition-delay:0s}
+@media(max-width:680px){.fgrid{grid-template-columns:1fr}.navin{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.grid3>.card,.steps>.step{opacity:1;transform:none;transition:none}.progress{display:none}}
+dl.facts{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:0;border-top:1px solid var(--line)}
+dl.facts dt,dl.facts dd{padding:16px 0;border-bottom:1px solid var(--line)}
+dl.facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-lift);padding-right:20px}
+dl.facts dd{color:var(--haze);max-width:72ch}
+dl.facts a,.note a,details a{color:var(--copper-lift)}
+.tl2{list-style:none;border-left:1px solid var(--line-hot);margin-left:6px}
+.tl2 li{position:relative;padding:0 0 38px 28px}
+.tl2 li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(var(--copper-rgb),.14)}
+.tl2 .yr{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-lift);margin-bottom:6px}
+.tl2 h2{font-size:1.45rem;margin-bottom:8px}
+.tl2 p{color:var(--haze);max-width:64ch}
+@media(max-width:640px){dl.facts{grid-template-columns:1fr}dl.facts dt{border-bottom:0;padding-bottom:0}}
+
+article.essay-page{width:min(720px,92vw);margin:0 auto;padding:130px 0 70px;position:relative;z-index:2}
+article.essay-page h1{font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.04;margin-bottom:16px}
+.byline2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--haze);margin:18px 0 6px}
+.byline2 a{color:var(--copper-lift);text-decoration:none}
+.dek{color:var(--haze);font-size:1.15rem;margin-top:8px}
+.ebody{margin-top:38px}
+.ebody p{margin-bottom:22px;font-size:1.08rem;line-height:1.75;color:#D6DBE6}
+.ebody p.stand{font-family:var(--display);font-weight:700;font-size:clamp(1.35rem,3vw,1.75rem);line-height:1.22;letter-spacing:-.02em;color:var(--paper);border-left:2px solid var(--copper);padding:6px 0 6px 22px;margin:34px 0}
+.author{margin-top:54px;padding:26px 26px;border:1px solid var(--line);border-radius:3px;background:rgba(var(--strata-rgb),.5)}
+.author h2{font-size:1.2rem;margin-bottom:8px}
+.author p{color:var(--haze);font-size:.97rem;margin-bottom:10px}
+.author a,.more a{color:var(--copper-lift)}
+.more{margin-top:44px}
+.more ul{list-style:none;margin-top:14px}
+.more li{padding:12px 0;border-bottom:1px solid var(--line)}
+.more li a{text-decoration:none;color:var(--paper);font-family:var(--display);font-weight:600}
+.more li a:hover{color:var(--copper-lift)}
+.more li span{display:block;color:var(--haze);font-size:.9rem;margin-top:2px}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<nav>
+  <div class="navin">
+    <a class="brand" href="/" aria-label="Siddhartha Parmar, home"><img src="/assets/crest.png" alt="" width="30" style="height:auto;vertical-align:middle;margin-right:10px">S<b>P</b></a>
+    <div class="navlinks">
+      <a href="/">Home</a>
+      <a href="/writing/" aria-current="page">Writing</a>
+      <a href="/facts.html">Facts</a>
+      <a href="/aurum.html">Aurum</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+<main>
+  <article class="essay-page">
+    <div class="crumbs"><a href="/">Siddhartha Parmar</a> &nbsp;/&nbsp; Writing</div>
+    <div class="eyebrow">Writing</div>
+    <h1>Essays by Siddhartha Parmar</h1>
+    <p class="dek">Written from operating experience in Zambia. Six arguments on infrastructure, energy, space, conservation, product design and AI.</p>
+    <div class="more"><ul>
+        <li><a href="/writing/africas-next-infrastructure-wont-look-like-roads.html">Africa's Next Infrastructure Won't Look Like Roads</a><span>Infrastructure &middot; 6 min read. We keep sequencing development in the order it happened somewhere else. The binding constraint here is not movement. It is information and power at the edge.</span></li>
+        <li><a href="/writing/building-data-centres-beside-hydropower.html">Building Data Centres Beside Hydropower</a><span>Energy &middot; 7 min read. Rural mini-grids fail for a boring reason. Nobody buys enough power. Compute is the anchor customer that fixes the balance sheet.</span></li>
+        <li><a href="/writing/why-satellites-matter-more-than-fibre.html">Why Satellites Matter More Than Fibre</a><span>Space &middot; 6 min read. Fibre moves data somebody already has. Zambia's real deficit is observation. Nobody knows, week to week, what is actually happening on the ground.</span></li>
+        <li><a href="/writing/adventure-businesses-are-conservation-businesses.html">Adventure Businesses Are Conservation Businesses</a><span>Conservation &middot; 5 min read. Conservation funded by grants is fragile. Conservation funded by an operating company that needs the resource intact is durable.</span></li>
+        <li><a href="/writing/design-for-load-shedding.html">Design for Load Shedding</a><span>Product &middot; 5 min read. Almost every product assumption imported from elsewhere breaks here for the same reason. It assumes continuity. Power, connectivity and cash are all intermittent.</span></li>
+        <li><a href="/writing/what-actually-breaks-when-you-deploy-agents.html">What Actually Breaks When You Deploy Agents</a><span>AI &middot; 7 min read. Agentic AI demos beautifully and fails in specific, repeatable ways. After running them across five companies, here is the list nobody puts in the keynote.</span></li>
+    </ul></div>
+  </article>
+</main>
+<footer>
+  <div class="shell fin">
+    <span>SIDDHARTHA PARMAR &nbsp;/&nbsp; LUSAKA, ZAMBIA</span>
+    <div><a href="/">Home</a><a href="/facts.html">Facts</a><a href="/timeline.html">Timeline</a><a href="/aurum.html">Aurum</a></div>
+  </div>
+</footer>
+<script>
+(function(){
+  const bar=document.getElementById('progress');
+  function prog(){const h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.transform='scaleX('+(m>0?Math.min(1,h.scrollTop/m):0)+')'}
+  addEventListener('scroll',prog,{passive:true});prog();
+  const T=window.__THEMES||{},cur=document.documentElement.getAttribute('data-theme'),mt=document.querySelector('meta[name="theme-color"]');
+  if(mt&&T[cur])mt.setAttribute('content',T[cur].c);
+})();
+</script>
+</body>
+</html>

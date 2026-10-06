@@ -7,6 +7,7 @@ the contact forms. No build step, no framework, no database.
 index.html            home page: splash, themes, ventures, essays, contact form
 aurum.html            Aurum Resources page (copper, mines, investor procurement)
 media-kit.html        bio, facts and contact details for press
+writing/              one page per essay (plus index), generated from the essay text
 facts.html            canonical facts and biography (citation target for AI search)
 timeline.html         career chronology
 assets/crest.png      the crest (splash, hero, nav logo, favicon)

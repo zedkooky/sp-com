@@ -778,7 +778,7 @@ h2.sec .w>span{display:inline-block;transform:translateY(112%);transition:transf
     <div class="eyebrow">Writing</div>
     <h2 class="sec">Six arguments I keep having.</h2>
     <p class="lede">Written, not summarised. Click any one to read it.</p>
-    <div class="egrid" id="egrid"></div>
+    <div class="egrid" id="egrid"><a class="essay" href="writing/africas-next-infrastructure-wont-look-like-roads.html"><div class="meta"><span>Infrastructure</span><span>6 min</span></div><h3>Africa's Next Infrastructure Won't Look Like Roads</h3><p>We keep sequencing development in the order it happened somewhere else. The binding constraint here is not movement. It is information and power at the edge.</p><div class="go">Read essay &rarr;</div></a><a class="essay" href="writing/building-data-centres-beside-hydropower.html"><div class="meta"><span>Energy</span><span>7 min</span></div><h3>Building Data Centres Beside Hydropower</h3><p>Rural mini-grids fail for a boring reason. Nobody buys enough power. Compute is the anchor customer that fixes the balance sheet.</p><div class="go">Read essay &rarr;</div></a><a class="essay" href="writing/why-satellites-matter-more-than-fibre.html"><div class="meta"><span>Space</span><span>6 min</span></div><h3>Why Satellites Matter More Than Fibre</h3><p>Fibre moves data somebody already has. Zambia's real deficit is observation. Nobody knows, week to week, what is actually happening on the ground.</p><div class="go">Read essay &rarr;</div></a><a class="essay" href="writing/adventure-businesses-are-conservation-businesses.html"><div class="meta"><span>Conservation</span><span>5 min</span></div><h3>Adventure Businesses Are Conservation Businesses</h3><p>Conservation funded by grants is fragile. Conservation funded by an operating company that needs the resource intact is durable.</p><div class="go">Read essay &rarr;</div></a><a class="essay" href="writing/design-for-load-shedding.html"><div class="meta"><span>Product</span><span>5 min</span></div><h3>Design for Load Shedding</h3><p>Almost every product assumption imported from elsewhere breaks here for the same reason. It assumes continuity. Power, connectivity and cash are all intermittent.</p><div class="go">Read essay &rarr;</div></a><a class="essay" href="writing/what-actually-breaks-when-you-deploy-agents.html"><div class="meta"><span>AI</span><span>7 min</span></div><h3>What Actually Breaks When You Deploy Agents</h3><p>Agentic AI demos beautifully and fails in specific, repeatable ways. After running them across five companies, here is the list nobody puts in the keynote.</p><div class="go">Read essay &rarr;</div></a></div>
   </div>
 </section>
 
@@ -868,168 +868,60 @@ h2.sec .w>span{display:inline-block;transform:translateY(112%);transition:transf
   </div>
 </footer>
 
-<div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Essay">
-  <button class="rclose" id="rclose">Close &nbsp;esc</button>
-  <div class="rin"><div class="rbody" id="rbody"></div></div>
-</div>
 
 <script>
 const ESSAYS = [
-{
-  kicker:"Infrastructure",
-  read:"6 min",
-  title:"Africa's Next Infrastructure Won't Look Like Roads",
-  dek:"We keep sequencing development in the order it happened somewhere else. The binding constraint here is not movement. It is information and power at the edge.",
-  body:[
-    "Every infrastructure conversation in this country starts with roads. Then power. Then, if there is money left over, connectivity.",
-    "I understand why. A road is visible. You can cut a ribbon on a road. A minister can stand on it and be photographed. Nobody has ever been photographed standing on a data layer.",
-    "But the sequencing is inherited, and it is wrong for where we actually are.",
-    {stand:"A road moves maize. It does not tell you whether the maize was worth planting."},
-    "Consider a cotton farmer in Eastern Province. She has perhaps two hectares. The nearest tarred road is real, and it matters. But her margin is not lost in transport. It is lost months earlier, in decisions made without information: when to plant against a rainfall pattern that has shifted, whether the stand is stressed while there is still time to act, what the buyer will actually pay at gate. She is not short of movement. She is short of sight.",
-    "Now consider the mini-grid at Ikelenge. It generates more power than the community around it consumes. The generation exists. The poles exist. What is missing is a customer large enough to make the economics work, so the tariff stays high, connections stay slow, and the asset sits underused. Again, not a movement problem.",
-    "This is the pattern almost everywhere I look. The physical asset is either present or fundable. What is absent is the layer that makes it productive, and that layer is made of data, power and payment rails rather than concrete.",
-    "There is a second reason the road-first instinct fails us, and it is about capital. A national road programme is a sovereign undertaking. It requires a loan, a decade and a political consensus. A modular data centre next to an existing hydro plant is a container, a transformer and a contract. One of those is available to a Zambian company this year. The other is not.",
-    "So the infrastructure that gets built here over the next twenty years will not look like the infrastructure that got built in the twentieth century. It will be smaller, privately financed, placed wherever the underlying resource already sits, and duplicated rather than scaled. Containers, not corridors. Constellations, not cables. Fleets of small things that each pay for themselves, rather than one enormous thing that pays for itself in 2050.",
-    "I want to be careful here, because this argument is easy to overstate. Roads matter. A satellite will not get a truck to Mongu. Ports matter. Transmission matters, and Zambia's transmission constraints are real and expensive. I am not arguing that the physical layer is obsolete.",
-    "I am arguing against the assumption that development has to arrive in the same order it arrived elsewhere, and that we must therefore wait our turn. We did not wait for landlines. We should not wait for the rest of it either.",
-    {stand:"Build the layer you can finance this year, on top of the asset that is already standing."},
-    "That is the whole strategy. It is not romantic. It happens to be available."
-  ]
-},
-{
-  kicker:"Energy",
-  read:"7 min",
-  title:"Building Data Centres Beside Hydropower",
-  dek:"Rural mini-grids fail for a boring reason. Nobody buys enough power. Compute is the anchor customer that fixes the balance sheet.",
-  body:[
-    "There is a well-documented failure mode in rural electrification, and it has nothing to do with engineering.",
-    "You build a mini-grid. The turbines work. The line goes up. And then you discover that the village consumes a fraction of what you generate, mostly at night, mostly for lighting. Your capital cost is fixed. Your revenue is tiny. So the tariff has to be high, which suppresses the demand you needed, which keeps the tariff high. The project survives on grant money, or it does not survive.",
-    "Engineers call this stranded capacity. I call it the reason most of these projects need a donor forever.",
-    {stand:"The problem is not generation. The problem is that nobody shows up to buy."},
-    "What such a grid needs is an anchor load. A customer who will take large volumes of the surplus, pay reliably, and, critically, get out of the way the moment local demand rises. That last property is the hard one. A cement plant will not power down because a clinic needs power. A data centre running interruptible workloads will, in seconds.",
-    "That is the entire thesis behind Quantum Hash Ventures. Put modular compute next to the generation. Buy the power nobody else is buying. Curtail instantly when the community needs it. Pay in hard currency into a project that previously had none.",
-    "The economics change immediately. The mini-grid now has a bankable offtake agreement, which means it can raise commercial debt instead of grants. The tariff for households can come down because fixed costs are being carried by a large industrial customer. And crucially, expansion is now justified. You build the next turbine because you have a buyer, not because a programme cycle funded it.",
-    "Here is where I lose about half of any given room: the first workload we run is Bitcoin mining.",
-    "I understand the reaction. But look at what the workload actually needs to be. It has to be location indifferent, because the power is in Ikelenge and not in Lusaka. It has to be interruptible without penalty, because the community comes first. It has to be able to absorb any quantity of power at any hour. And it has to settle in a currency that is not exposed to a single local counterparty.",
-    "Mining meets all four. Almost nothing else does. AI training does not, because it hates interruption. Web hosting does not, because it needs latency and uptime guarantees. Inference is getting closer and I expect to run it on the same sites within a few years.",
-    "So the honest framing is this. Mining is not the point. Base load is the point. Mining is simply the first customer willing to sign for interruptible power in a place with no fibre and no grid connection, and it converts stranded electricity into revenue on day one instead of year seven.",
-    "The objection I take more seriously is fairness. Is it right for a data centre to consume power in a country with load shedding? My answer is that we are not competing for grid power. We are monetising power that would otherwise be spilled at a site the national grid does not reach. If we ever find ourselves bidding against a household for the same electron, the model has failed and we should stop.",
-    {stand:"Build the compute where the water already falls. Leave when the village needs the power. Pay for the turbine either way."},
-    "That is a business. Everything before it was a project."
-  ]
-},
-{
-  kicker:"Space",
-  read:"6 min",
-  title:"Why Satellites Matter More Than Fibre",
-  dek:"Fibre moves data somebody already has. Zambia's real deficit is observation. Nobody knows, week to week, what is actually happening on the ground.",
-  body:[
-    "The title is deliberately unfair, so let me be precise about the claim. Fibre is better than satellite for almost everything it can reach. Where fibre exists, use it. I am not arguing about bandwidth.",
-    "I am arguing about what is scarce, and bandwidth is not the scarcest thing here.",
-    "Zambia is 752,000 square kilometres. Ask a simple question about it. How much maize is standing in Central Province this week, and how stressed is it? Which stretches of the Kafue have dropped below last year? Where was charcoal cut in the last thirty days? How many hectares of the cotton crop were actually planted against what was contracted?",
-    {stand:"These are not hard questions. They are unanswered questions, which is a different thing."},
-    "We answer them today with sampling, self-reporting and extension officers covering areas the size of small countries. The result is a number that arrives late, at national resolution, with an error bar wide enough to hide a bad season inside it. Policy gets made on it. Loans get priced on it. Insurance gets refused on it.",
-    "Fibre does not fix this, because fibre transports information from one place that has it to another. If nobody generated the observation in the first place, a faster pipe moves nothing.",
-    "Earth observation generates it. A satellite pass does not care that the road to the district is impassable in February. It does not need an officer with fuel. It returns on schedule, covers everything, and produces a measurement that can be compared to the same measurement from last year.",
-    "This is why SpaceZ exists, and why the first products are not glamorous. Crop area and condition. Water extent. Land use change. Flood and drought signal. These are the boring measurements that everything else depends on, and right now they are largely imported, delayed, or absent.",
-    "The second reason to build here rather than buy is that the analysis layer is where the value sits, and it is the layer that has to be local. A global model will tell you a field is stressed. It will not tell you that this is the third year of a lease dispute, that the cooperative switched seed varieties, or that the road washed out and the inputs never arrived. Interpretation requires being from here.",
-    "I get asked whether Zambia should be launching its own satellites. Eventually, for specific purposes. But that is the wrong first question and it wastes a decade. The immediate opportunity is that enormous quantities of imagery already exist, much of it free, and almost nobody in the region is turning it into decisions people will pay for. The constellation is not the moat. The interpretation is.",
-    {stand:"Buy the pixels. Own the meaning."},
-    "Build fibre. Build towers. Build the terrestrial layer as fast as capital allows. But understand that connectivity is a distribution problem, and observation is a creation problem, and we have been treating the second one as if it were somebody else's job."
-  ]
-},
-{
-  kicker:"Conservation",
-  read:"5 min",
-  title:"Adventure Businesses Are Conservation Businesses",
-  dek:"Conservation funded by grants is fragile. Conservation funded by an operating company that needs the resource intact is durable.",
-  body:[
-    "Tell someone outside the region that you run a diving company in Zambia and you get a particular kind of pause. We are landlocked. It sounds like a joke that has not landed.",
-    "Then you explain that the actual business is training rescue divers for copper mines, and the pause changes character.",
-    "The Copperbelt has flooded shafts, submerged pumps, sumps and tailings dams. That work requires commercial divers with confined-space and contaminated-water competency, and it requires them close by, because when a shaft floods nobody has time to fly a team in from Johannesburg. Mines need this capability. Historically they have imported it.",
-    "So the Zambian Outdoor Adventure Company builds it here. Thirty-five divers, eight mines, training and equipment supply, with Hennie Smit running the water side. It is unglamorous industrial work and it produces something the expedition side of the business could never fund on its own: a permanent, employed, locally trained dive team.",
-    {stand:"The industrial contract pays for the capability. The capability makes the conservation work possible."},
-    "That same team, in the weeks between mine contracts, can survey a river system, map a wreck, run an expedition, or do underwater work for a conservation project that could never have afforded to develop the skills from scratch.",
-    "This is the part I want people in conservation to sit with. The dominant funding model for African conservation is philanthropic. It is generous, it is well intended, and it is structurally fragile. It runs on grant cycles, donor fashion and the attention of people who live somewhere else. When attention moves, the rangers do not get paid.",
-    "A business has a different relationship with the resource. If the reef, the river or the escarpment degrades, an operating company loses its product. That is not virtue. It is alignment, which is more reliable than virtue.",
-    "I am not claiming tourism automatically conserves anything. Badly run tourism is extractive and I have watched it be extractive. The distinction is whether the operator's revenue depends on the resource staying intact over decades, and whether local people hold the jobs that depend on it. If both are true, you have an institution with a reason to defend the place. If neither is true, you have a hotel.",
-    "The version I want to build is straightforward. An industrial line of business that generates hard revenue and trains rare skills. An expedition line that uses those skills and creates guiding jobs. And conservation work that is a normal cost of operating rather than a fundraising campaign.",
-    {stand:"Fund the ranger from the invoice, not from the appeal."},
-    "It is slower to build than a grant application. It also does not disappear when someone else's board changes its priorities."
-  ]
-},
-{
-  kicker:"Product",
-  read:"5 min",
-  title:"Design for Load Shedding",
-  dek:"Almost every product assumption imported from elsewhere breaks here for the same reason. It assumes continuity. Power, connectivity and cash are all intermittent.",
-  body:[
-    "The most useful design constraint I have is that the electricity goes off.",
-    "Not as a disaster. As a schedule. Hours of it, most days, for months at a time depending on the water level at Kariba. Everyone here plans around it. Almost no software does.",
-    "Once you take that seriously, a lot of received product wisdom stops applying.",
-    {stand:"Continuous power, continuous connectivity and continuous cash are three assumptions, and all three are wrong here."},
-    "Start with connectivity. An app that requires a live connection to be useful is an app that is useless exactly when a person most needs it, which is out on a farm or down a road or in a district office at four in the afternoon. So the default is offline first. The application holds its state locally, works fully without a signal, and reconciles when it finds one. Sync is a background event, not a precondition.",
-    "Then payload. Data is expensive relative to income here, and people notice. A page that pulls three megabytes of fonts and hero imagery is charging the user real money to look at it. Nyimboo has to work for someone on a bus in Kabwata with two bars and a bundle they bought this morning. That single scenario removes most of what a streaming interface would otherwise carry.",
-    "Then the device. The phone in the hand is often three generations old with a battery that has been through several rainy seasons. Battery draw is a design constraint, not a footnote. Background location polling, aggressive prefetching and animation-heavy interfaces are not features here. They are ways to get uninstalled.",
-    "Then the channel. AgriNova's most important insight was not technical. It was that the extension officer who has to act on an advisory may be carrying a feature phone. So the intelligence can be as sophisticated as we like, but the last hundred metres has to be able to collapse to SMS or USSD without losing the instruction. If the advice cannot survive being reduced to one hundred and sixty characters, the advice is not finished.",
-    "Then money. Card penetration is low and mobile money is the real rail. Balances are lumpy, arriving with a harvest or a shift payment rather than monthly. Subscription pricing designed around a salaried customer will fail against a customer whose income arrives four times a year. Prepaid, bundled and small denominations are not downmarket compromises. They are the actual market.",
-    "None of this is a complaint. Constraints like these produce better engineering, because they force you to establish what the product genuinely needs in order to be useful. Software built to work with intermittent power, expensive data and old hardware also works beautifully in perfect conditions. Software built the other way round does not travel.",
-    {stand:"Build for the grid you have. It works on the grid you wish you had."},
-    "Every product I have shipped that ignored this had to be rebuilt. Every one that started from it has held up."
-  ]
-},
-{
-  kicker:"AI",
-  read:"7 min",
-  title:"What Actually Breaks When You Deploy Agents",
-  dek:"Agentic AI demos beautifully and fails in specific, repeatable ways. After running them across five companies, here is the list nobody puts in the keynote.",
-  body:[
-    "I run agents in production across five businesses. Automation that reconciles invoices, pipelines that turn satellite passes into farmer advisories, research agents that read tender documents, a trading agent that sizes its own positions. Some of it works well enough that I no longer think about it. Some of it cost me money to learn.",
-    "The talks I get invited to give usually want the first half of that sentence. This essay is the second half.",
-    {stand:"An agent demo is a system with one happy path and an audience that will not test it."},
-    "The first failure is looping. An agent given a goal and a set of tools will, when it cannot achieve the goal, keep trying. It will rephrase, retry, call the same tool with slightly different arguments, and convince itself it is making progress. Nothing in its design tells it to stop and admit defeat. I have watched an agent spend real money doing this overnight. Every agent needs a step budget, a cost ceiling and an explicit way to fail loudly. Build the exit before you build the capability.",
-    "The second is tool calls with no failure path. In a demo the API returns. In production the API times out, or returns an empty array, or returns something structurally valid and factually wrong. A model handed a bad tool result will usually carry on and reason confidently from it, because nothing marks it as bad. So every tool needs to distinguish between no result, a failed call and a successful call, and the agent needs different instructions for each. This is unglamorous plumbing and it is most of the work.",
-    "The third is cost. Nobody models it. A workflow that costs a fraction of a cent per run looks free until it runs on every row of a table with thirty thousand farmers in it, several times a day, with a retry policy. I now estimate cost per run and multiply by realistic volume before building anything, because the difference between a viable product and an expensive hobby is often one order of magnitude in call count.",
-    "The fourth is verification. The output goes somewhere. A document, a message, a decision. If nobody checks it, the first time you find out it was wrong is when a customer tells you. The question I ask now is not whether the agent is accurate. It is what happens when it is wrong, who notices, and how fast. If the answer is nobody and never, the agent should not be writing to that destination.",
-    {stand:"Autonomy is not the goal. Correct output at acceptable cost with a known failure mode is the goal."},
-    "There is a fifth failure that is specific to operating here, and it is about latency and connectivity. An agent chain with six sequential model calls is fine on a fibre connection in an office. It is unusable for a field officer on a phone with two bars who needs an answer now. My rule has become that anything a user waits on runs in one call, and anything that needs a chain runs in the background and delivers its result later through a channel that tolerates delay.",
-    "So what does work?",
-    "Narrow scope beats general capability. An agent that does one job with three tools is reliable. The same model given fifteen tools and a vague mandate is not. Almost every system I have that runs unattended got there by being made smaller.",
-    "Deterministic code around a probabilistic core. The model does the part that genuinely needs judgment, which is usually reading unstructured input or drafting language. Everything before and after it, the routing, the validation, the arithmetic, the writing to a database, is ordinary code. n8n is useful to me precisely because it makes that boundary visible.",
-    "Humans at the point of consequence. Not reviewing everything, which defeats the purpose, but standing at the moment where an action becomes irreversible. Money moving, a message sending, a record being deleted. The agent prepares, a person approves. That single pattern has prevented more problems than any prompt I have written.",
-    "And build for the failure you expect. If the model is unavailable, what does the user see? If the answer is a spinner, you have not finished.",
-    {stand:"The teams getting value from this are not the ones with the best prompts. They are the ones who assumed it would break and designed for that."},
-    "None of this is a reason to wait. The capability is real and the leverage for a small team in a market like ours is genuinely large. I have shipped things with two people that would have needed twenty five years ago. But the leverage arrives through engineering discipline, not through the model, and the sooner that is understood the fewer expensive nights there are."
-  ]
-}
+ {
+  "kicker": "Infrastructure",
+  "read": "6 min",
+  "title": "Africa's Next Infrastructure Won't Look Like Roads",
+  "dek": "We keep sequencing development in the order it happened somewhere else. The binding constraint here is not movement. It is information and power at the edge.",
+  "slug": "africas-next-infrastructure-wont-look-like-roads"
+ },
+ {
+  "kicker": "Energy",
+  "read": "7 min",
+  "title": "Building Data Centres Beside Hydropower",
+  "dek": "Rural mini-grids fail for a boring reason. Nobody buys enough power. Compute is the anchor customer that fixes the balance sheet.",
+  "slug": "building-data-centres-beside-hydropower"
+ },
+ {
+  "kicker": "Space",
+  "read": "6 min",
+  "title": "Why Satellites Matter More Than Fibre",
+  "dek": "Fibre moves data somebody already has. Zambia's real deficit is observation. Nobody knows, week to week, what is actually happening on the ground.",
+  "slug": "why-satellites-matter-more-than-fibre"
+ },
+ {
+  "kicker": "Conservation",
+  "read": "5 min",
+  "title": "Adventure Businesses Are Conservation Businesses",
+  "dek": "Conservation funded by grants is fragile. Conservation funded by an operating company that needs the resource intact is durable.",
+  "slug": "adventure-businesses-are-conservation-businesses"
+ },
+ {
+  "kicker": "Product",
+  "read": "5 min",
+  "title": "Design for Load Shedding",
+  "dek": "Almost every product assumption imported from elsewhere breaks here for the same reason. It assumes continuity. Power, connectivity and cash are all intermittent.",
+  "slug": "design-for-load-shedding"
+ },
+ {
+  "kicker": "AI",
+  "read": "7 min",
+  "title": "What Actually Breaks When You Deploy Agents",
+  "dek": "Agentic AI demos beautifully and fails in specific, repeatable ways. After running them across five companies, here is the list nobody puts in the keynote.",
+  "slug": "what-actually-breaks-when-you-deploy-agents"
+ }
 ];
 
-const grid=document.getElementById('egrid');
-ESSAYS.forEach((e,i)=>{
-  const b=document.createElement('button');
-  b.className='essay';
-  b.innerHTML=`<div class="meta"><span>${e.kicker}</span><span>${e.read}</span></div>
-    <h3>${e.title}</h3><p>${e.dek}</p><div class="go">Read essay &rarr;</div>`;
-  b.addEventListener("click",()=>openEssay(i));
-  grid.appendChild(b);
+const grid=document.getElementById('egrid');grid.innerHTML='';
+ESSAYS.forEach(e=>{
+  const a=document.createElement('a');
+  a.className='essay';a.href='writing/'+e.slug+'.html';
+  a.innerHTML='<div class="meta"><span>'+e.kicker+'</span><span>'+e.read+'</span></div><h3>'+e.title+'</h3><p>'+e.dek+'</p><div class="go">Read essay &rarr;</div>';
+  grid.appendChild(a);
 });
-
-const reader=document.getElementById('reader'),rbody=document.getElementById('rbody');
-let lastTrigger=null;
-function openEssay(i){
-  const e=ESSAYS[i];
-  lastTrigger=document.activeElement;
-  rbody.innerHTML=`<div class="meta">${e.kicker} &nbsp;/&nbsp; ${e.read} read</div><h2>${e.title}</h2>`+
-    e.body.map(p=>typeof p==='string'?`<p>${p}</p>`:`<p class="stand">${p.stand}</p>`).join('');
-  reader.classList.add('open');
-  reader.querySelector('.rin').scrollTop=0;
-  document.body.style.overflow='hidden';
-  document.getElementById('rclose').focus();
-}
-function shut(){reader.classList.remove('open');document.body.style.overflow='';if(lastTrigger)lastTrigger.focus()}
-document.getElementById('rclose').addEventListener('click',shut);
-reader.addEventListener('click',ev=>{if(ev.target===reader||ev.target.classList.contains('rin'))shut()});
-document.addEventListener('keydown',ev=>{if(ev.key==='Escape')shut()});
 
 /* ---------- contact form ---------- */
 const DOORS={
