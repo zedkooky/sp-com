@@ -7,6 +7,8 @@ the contact forms. No build step, no framework, no database.
 index.html            home page: splash, themes, ventures, essays, contact form
 aurum.html            Aurum Resources page (copper, mines, investor procurement)
 media-kit.html        bio, facts and contact details for press
+facts.html            canonical facts and biography (citation target for AI search)
+timeline.html         career chronology
 assets/crest.png      the crest (splash, hero, nav logo, favicon)
 og.png                1200x630 link-preview image
 sitemap.xml           pages for search engines
@@ -43,7 +45,7 @@ Upload these to the web root (`public_html` or equivalent) so that
 `/aurum.html` and `/og.png` resolve:
 
 ```
-index.html  aurum.html  media-kit.html  og.png  robots.txt  sitemap.xml
+index.html  aurum.html  media-kit.html  facts.html  timeline.html  og.png  robots.txt  sitemap.xml
 contact.php  config.example.php  .htaccess  assets/
 ```
 
