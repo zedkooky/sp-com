@@ -1,0 +1,45 @@
+# siddharthaparmar.com  —  Apache / LiteSpeed
+
+Options -Indexes
+DirectoryIndex index.html
+
+# ---- force HTTPS and strip www ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://siddharthaparmar.com/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} ^www\.siddharthaparmar\.com$ [NC]
+  RewriteRule ^(.*)$ https://siddharthaparmar.com/$1 [R=301,L]
+</IfModule>
+
+# ---- never serve the config ----
+<FilesMatch "^config\.php$">
+  Require all denied
+</FilesMatch>
+
+# ---- security headers ----
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ---- compression ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---- caching ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>

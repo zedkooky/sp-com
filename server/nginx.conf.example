@@ -1,0 +1,62 @@
+# /etc/nginx/sites-available/siddharthaparmar.com
+# Self-managed VPS. Adjust the PHP-FPM socket to match your PHP version.
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name siddharthaparmar.com www.siddharthaparmar.com;
+    return 301 https://siddharthaparmar.com$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.siddharthaparmar.com;
+
+    ssl_certificate     /etc/letsencrypt/live/siddharthaparmar.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/siddharthaparmar.com/privkey.pem;
+
+    return 301 https://siddharthaparmar.com$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name siddharthaparmar.com;
+
+    root /var/www/siddharthaparmar.com;
+    index index.html;
+
+    ssl_certificate     /etc/letsencrypt/live/siddharthaparmar.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/siddharthaparmar.com/privkey.pem;
+
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml text/plain;
+    gzip_min_length 512;
+
+    location = /config.php { deny all; }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    }
+
+    location ~* \.(css|js|jpg|jpeg|png|svg|ico|woff2)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
